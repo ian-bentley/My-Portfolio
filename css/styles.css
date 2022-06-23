@@ -347,6 +347,13 @@ li {
 
 #main-nav ul {
   padding-left: 0;
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  height: 50px;
 }
 
 a {
@@ -355,8 +362,129 @@ a {
 }
 
 body {
-  background-color: darkseagreen;
+  background-color: #333333;
   color: white;
+}
+
+header {
+  background-color: #222222;
+}
+
+ul {
+  padding-left: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+#main-nav li, #about h3 {
+  cursor: pointer;
+  user-select: none;
+}
+
+#main-nav li:hover {
+  border-bottom: solid white 2px;
+}
+
+#projects img {
+  width: 100%;
+  max-width: 360px;
+}
+
+#projects-grid {
+  max-width: 360px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 641px) {
+  #projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    max-width: initial;
+    justify-items: center;
+    gap: 40px;
+  }
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+#portrait {
+  display: block;
+  width: 185px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 641px) {
+  #portrait {
+    width: 300px;
+    margin: initial;
+  }
+}
+
+h1, h3 {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+#about p {
+  padding-left: 20px;
+}
+
+#intro {
+  padding-top: 10px;
+}
+
+.project {
+  max-width: 360px;
+  margin-bottom: 70px;
+}
+
+#about-top {
+  width: 320px;
+}
+@media screen and (min-width: 641px) {
+  #about-top {
+    width: initial;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+#about {
+  width: 320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 641px) {
+  #about {
+    width: initial;
+  }
+}
+
+#submit {
+  width: 100px;
+  margin: 0 0 auto 0;
+}
+
+@media screen and (min-width: 641px) {
+  #about-sections {
+    width: 640px;
+    margin: 0 auto;
+  }
+}
+
+#about, #projects, #contact {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

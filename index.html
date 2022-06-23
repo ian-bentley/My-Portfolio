@@ -14,108 +14,122 @@
         <header>
             <nav id="main-nav">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li id="about-btn">About</li>
+                    <li id="projects-btn">Projects</li>
+                    <li id="contact-btn">Contact</li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section id="about">
-                <h1>Ian Bentley</h1>
-                <h2>Front End Web Developer</h2>
-                <section id="intro">
-                    <h3>Introduction</h3>
-                    <p>Hello, I am a front-end web developer student.</p>
+            <div id="section-grid">
+                <section id="about" class="section-grid-item">
+                    <div id="about-top">
+                        <div id="headings">
+                            <h1>Ian Bentley</h1>
+                            <h2>Front End Web Developer</h2>
+                        </div>
+                        <img src="imgs/me.jpg" alt="A photo of myself" id="portrait">
+                    </div>
+                    <div id="about-sections">
+                        <section id="intro">
+                            <h3>Introduction</h3>
+                            <div>
+                                <p>Hello, I am a front-end web developer student.</p>
+                            </div>
+                        </section>
+                        <section id="education">
+                            <h3>Education</h3>
+                            <div class="hide">
+                                <p>I have an Associate of Science in Computer Programming degree from 
+                                    Grossmont-Cuyamaca Community College. Along with that, I have gone through 
+                                    a Techdegree program with Team Treehouse on Front-End Web Development</p>
+                            </div>
+                        </section>
+                        <section id="skills">
+                            <h3>Skills</h3>
+                            <div class="hide">
+                                <p>My skill in web development include the following:</p>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS & SCSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Responsive design</li>
+                                    <li>VS Code</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
                 </section>
-                <section id="education">
-                    <h3>Education</h3>
-                    <p>I have an Associate of Science in Computer Programming degree from 
-                        Grossmont-Cuyamaca Community College. Along with that, I have gone through 
-                        a Techdegree program with Team Treehouse on Front-End Web Development</p>
+                <section id="projects" class="section-grid-item hide">
+                    <p>In this section is all the links to my other website projects and links to details 
+                        regarding the development of each one.</p>
+                    <h2>My Projects</h2>
+                    <div id="projects-grid">
+                        <div class="project">
+                            <a href="#"></a>
+                                <h3>This Website</h3>
+                                <img src="http://via.placeholder.com/640x360" alt="Thumbnail for this website">
+                                <p>This very portfolio website was programmed by me.</p>
+                                <a href="#"><p>This Website Details</p></a>
+                            </a>
+                        </div>
+                        <div class="project">
+                            <a href="#">
+                                <h3>Wheel of Success</h3>
+                                <img src="http://via.placeholder.com/640x360" alt="Wheel of Success Tumbnail">
+                                <p>Wheel of Success is a web game similar to hangman. A phrase is generated 
+                                    and the player has to guess what the phrase is before they run out of 
+                                    lives.</p>
+                                <a href="#"><p>Wheel of Success Details</p></a>
+                            </a>
+                        </div>
+                        <div class="project">
+                            <a href="#">
+                                <h3>Interactive Photo Gallery</h3>
+                                <img src="http://via.placeholder.com/640x360" alt="Interactive Photo Gallery Thumbnail">
+                                <p>This gallery displays photos in a grid. You can search filter the photos 
+                                    based on what's in each caption and expand an image by clicking on it.</p>
+                                    <a href="#"><p>Interactive Photo Gallery Details</p></a>
+                            </a>
+                        </div>
+                        <div class="project">
+                            <a href="#">
+                                <h3>Project 4</h3>
+                                <img src="http://via.placeholder.com/640x360" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                                    tempor incididunt ut labore et dolore magna aliqua. Aliquam id diam 
+                                    maecenas ultricies mi eget mauris pharetra et. Montes nascetur 
+                                    ridiculus mus mauris vitae ultricies. Mauris pellentesque pulvinar 
+                                    pellentesque habitant morbi tristique senectus et.</p>
+                                    <a href="#"><p>Project Details</p></a>
+                            </a>
+                        </div>
+                    </div>
                 </section>
-                <section id="skills">
-                    <h3>Skills</h3>
-                    <p>My skill in web development include the following:</p>
+                <section id="contact" class="section-grid-item hide">
+                    <h2>Contact Me</h2>
+                    <p>You can contact me using any of the following:</p>
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS & SCSS</li>
-                        <li>JavaScript</li>
-                        <li>Responsive design</li>
-                        <li>VS Code</li>
+                        <li><a href="https://www.linkedin.com/in/ian-bentley-658b4421b/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/ian-bentley" target="_blank">GitHub</a></li>
+                        <li>Email: ibentley981203@gmail.com</li>
+                        <li>Phone: +1 (619) 850-4688</li>
                     </ul>
+                    <p>Alternatively, you can contact me via email using the form below:</p>
+                    <form method="post" action="emailme.php">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="firstName">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="lastName">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <label for="message">Message</label>
+                        <textarea id="message"></textarea>
+                        <input type="submit" id="submit" value="Email Me">
+                    </form>
                 </section>
-            </section>
-            <section id="projects">
-                <h2>My Projects</h2>
-                <div id="projects-grid">
-                    <a href="#">
-                        <div>
-                            <h3>Project 1</h3>
-                            <img src="http://via.placeholder.com/640x360" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                                tempor incididunt ut labore et dolore magna aliqua. Aliquam id diam 
-                                maecenas ultricies mi eget mauris pharetra et. Montes nascetur 
-                                ridiculus mus mauris vitae ultricies. Mauris pellentesque pulvinar 
-                                pellentesque habitant morbi tristique senectus et.</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div>
-                            <h3>Project 2</h3>
-                            <img src="http://via.placeholder.com/640x360" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                                tempor incididunt ut labore et dolore magna aliqua. Aliquam id diam 
-                                maecenas ultricies mi eget mauris pharetra et. Montes nascetur 
-                                ridiculus mus mauris vitae ultricies. Mauris pellentesque pulvinar 
-                                pellentesque habitant morbi tristique senectus et.</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div>
-                            <h3>Project 3</h3>
-                            <img src="http://via.placeholder.com/640x360" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                                tempor incididunt ut labore et dolore magna aliqua. Aliquam id diam 
-                                maecenas ultricies mi eget mauris pharetra et. Montes nascetur 
-                                ridiculus mus mauris vitae ultricies. Mauris pellentesque pulvinar 
-                                pellentesque habitant morbi tristique senectus et.</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div>
-                            <h3>Project 4</h3>
-                            <img src="http://via.placeholder.com/640x360" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                                tempor incididunt ut labore et dolore magna aliqua. Aliquam id diam 
-                                maecenas ultricies mi eget mauris pharetra et. Montes nascetur 
-                                ridiculus mus mauris vitae ultricies. Mauris pellentesque pulvinar 
-                                pellentesque habitant morbi tristique senectus et.</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <p>You can contact me using any of the following:</p>
-                <ul>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Email: ibentley981203@gmail.com</a></li>
-                </ul>
-                <p>Alternatively, you can contact me via email using the form below.</p>
-                <form method="post" action="emailme.php">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="firstName">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="lastName">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                    <label for="message">Message</label>
-                    <textarea id="message"></textarea>
-                    <input type="submit" id="submit" value="Email Me">
-                </form>
-            </section>
+            </div>
         </main>
+        <script src="js/app.js"></script>
     </body>
 </html>
