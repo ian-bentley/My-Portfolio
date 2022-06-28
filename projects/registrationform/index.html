@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>The Code Review</title>
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="page-title">The Code Review</h1>
+        </header>
+
+        <main>
+            <section id="sign-up">
+                <h2>Signup for our newsletter</h2>
+                <p>Get the latest news on how code is doing right in your inbox</p>
+            </section>
+            <form action="post">
+                <fieldset id="contact-info">
+                    <h2>Contact Information</h2>
+                    <div id="info-input">
+                        <div class="label-left">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="fullName" placeholder="Required" required>
+                        </div>
+                        
+                        <div class="label-left">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Required" required>
+                        </div>
+
+                        <div class="label-left">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number" name="phoneNumber" placeholder="5551234567">
+                        </div>
+                        
+                        <div class="label-left">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address" placeholder="100 Example St.">
+                        </div>
+                        
+                        <div class="label-left">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="New York City">
+                        </div>
+                        
+                        <div class="label-left">
+                            <label for="state">State</label>
+                            <select id="state" name="state">
+                                <option value="">Choose State</option>
+                                <option value="alabama">Alabama</option>
+                                <option value="alaska">Alaska</option>
+                                <option value="arizona">Arizona</option>
+                                <option value="arkansas">Arkansas</option>
+                                <option value="california">California</option>
+                                <option value="colorado">Colorado</option>
+                                <option value="connecticut">Connecticut</option>
+                                <option value="delaware">Delaware</option>
+                                <option value="florida">Florida</option>
+                                <option value="georgia">Georgia</option>
+                                <option value="hawaii">Hawaii</option>
+                                <option value="idaho">Idaho</option>
+                                <option value="illinois">Illinois</option>
+                                <option value="indiana">Indiana</option>
+                                <option value="iowa">Iowa</option>
+                                <option value="kansas">Kansas</option>
+                                <option value="kentucky">Kentucky</option>
+                                <option value="louisana">Louisana</option>
+                                <option value="maine">Maine</option>
+                                <option value="maryland">Maryland</option>
+                                <option value="massachusetts">Massachusetts</option>
+                                <option value="michigan">Michigan</option>
+                                <option value="minnesota">Minnesota</option>
+                                <option value="mississippi">Mississippi</option>
+                                <option value="missouri">Missouri</option>
+                                <option value="montana">Montana</option>
+                                <option value="nebraska">Nebraska</option>
+                                <option value="nevada">Nevada</option>
+                                <option value="newHampshire">New Hampshire</option>
+                                <option value="newJersey">New Jersey</option>
+                                <option value="newMexico">New Mexico</option>
+                                <option value="newYork">New York</option>
+                                <option value="northCarolina">North Carolina</option>
+                                <option value="northDakota">North Dakota</option>
+                                <option value="ohio">Ohio</option>
+                                <option value="oklahoma">Oklahoma</option>
+                                <option value="oregon">Oregon</option>
+                                <option value="pennsylvania">Pennsylvania</option>
+                                <option value="rhodeIsland">Rhode Island</option>
+                                <option value="southCarolina">South Carolina</option>
+                                <option value="southDakota">South Dakota</option>
+                                <option value="tennessee">Tennessee</option>
+                                <option value="texas">Texas</option>
+                                <option value="utah">Utah</option>
+                                <option value="vermont">Vermont</option>
+                                <option value="virginia">Virginia</option>
+                                <option value="washington">Washington</option>
+                                <option value="westVirginia">West Virginia</option>
+                                <option value="wisconsin">Wisconsin</option>
+                                <option value="wyoming">Wyoming</option>
+                            </select>
+                        </div>
+                        
+                        <div class="label-left">
+                            <label for="zip-code">Zip Code</label>
+                            <input type="text" id="zip-code" name="zipCode" placeholder="10123">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="newsletter">
+                    <h2>Newsletter</h2>
+                    <ul>
+                        <li><label>Select the newsletter you would like to recieve:</label></li>
+                        <li><input type="checkbox" id="html-news" name="htmlNews" value="htmlNews"><label for="html-news">HTML News</label></li>
+                        <li><input type="checkbox" id="css-news" name="cssNews" value="cssNews"><label for="css-news">CSS News</label></li>
+                        <li><input type="checkbox" id="javascript-news" name="javascriptNews" value="javascriptNews"><label for="javascript-news">Javascript News</label></li>
+                        <li><label>Newsletter format:</label></li>
+                        <li><input type="radio" id="html-format" name="newsletterFormat" value="htmlFormat"><label for="html-format">HTML</label></li>
+                        <li><input type="radio" id="plain-text-format" name="newsletterFormat" value="plainTextFormat"><label for="plain-text-format">Plain text</label></li>
+                        <li><label for="other-topics">Other topics you'd like to hear about:</label></li>
+                        <li><textarea id="other-topics" name="otherTopics" rows="7" placeholder="Type a comment."></textarea></li>
+                    </ul>
+                </fieldset>
+                <input type="button" id="sign-up-btn" value="Sign Up">
+            </form>
+        </main>
+        <footer>
+            <p><em>Copyright The Code Review</em></p>
+        </footer>
+    </body>
+</html>

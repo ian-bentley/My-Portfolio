@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+#search {
+    display: block;
+    margin: 60px auto 30px;
+    width: 33%;
+    height: 40px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+.gallery {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+}

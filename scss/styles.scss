@@ -110,6 +110,10 @@ h2 {
     margin-bottom: 70px;
 }
 
+.project img {
+    border: solid $text-color-default 2px;
+}
+
 #about-top {
     width: 320px;
     @media screen and (min-width: $screen-size-med) {
