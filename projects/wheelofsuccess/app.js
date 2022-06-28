@@ -166,6 +166,7 @@ function checkLetter(clickedButton)
 
 function checkWin()
 {
+    let isEnd = false;
     const startScreen = document.getElementById("overlay");
     const shownDisplayLetters = document.getElementsByClassName("show");
     const displayLetters = document.getElementsByClassName("letter");
@@ -176,6 +177,7 @@ function checkWin()
         startScreen.classList.add("lose");
         const loseText = document.createTextNode("You Lose!");
         startScreen.appendChild(loseText);
+        isEnd = true;
     }
     else if (shownDisplayLetters.length === displayLetters.length) // Won
     {
@@ -183,6 +185,33 @@ function checkWin()
         startScreen.classList.add("win");
         const winText = document.createTextNode("You Win!");
         startScreen.appendChild(winText);
+        isEnd = true;
+    }
+
+    if (isEnd)
+    {
+        // Reset display
+        const phraseDisplayElementList = phraseDisplayElement.firstElementChild;
+        while (phraseDisplayElementList.firstElementChild) // so long as there is a child of the list element
+        {
+            phraseDisplayElementList.removeChild(phraseDisplayElementList.firstElementChild);
+        }
+        // Reset keyboard
+        keyboardButtons = Array.from(keyboardElement.getElementsByTagName('BUTTON'));
+        keyboardButtons.forEach(button => {
+            if (button.classList.contains('chosen'))
+            {
+                button.disabled = false;
+                button.classList.remove('chosen');
+            }
+        });
+
+        // Reset lives
+        missed = 0;
+        const scoreboardHearts = Array.from(document.getElementsByClassName("tries"));
+        scoreboardHearts.forEach(heart => {
+            heart.firstChild.src = "images/liveHeart.png";
+        });
     }
 }
 
@@ -208,6 +237,19 @@ function ToggleStartScreen()
     }
     else
     {
+        //Reset Start Screen
+        if (startScreen.classList.contains('win'))
+        {
+            startScreen.classList.remove('win');
+        } 
+        else if (startScreen.classList.contains('lose'))
+        {
+            startScreen.classList.remove('lose');
+        }
+        if (startScreen.lastChild.nodeName === "#text")
+        {
+            startScreen.removeChild(startScreen.lastChild);
+        }
         startScreen.style.display = "none";
     }
 }

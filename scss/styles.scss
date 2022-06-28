@@ -155,7 +155,7 @@ img {
     }
 }
 
-#about, #projects, #contact {
+section {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -170,6 +170,6 @@ img {
     @media screen and (min-width: $screen-size-med) {
         width: 640px;
         margin-left: auto;
-        margin-right: auto;   
+        margin-right: auto;
     }
 }
