@@ -452,7 +452,7 @@ h2 {
   margin-bottom: 70px;
 }
 
-.project img {
+img {
   border: solid white 2px;
 }
 
@@ -505,6 +505,20 @@ h2 {
 #about, #projects, #contact {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.details img {
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 641px) {
+  .details {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
