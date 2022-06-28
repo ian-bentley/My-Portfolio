@@ -408,10 +408,14 @@ ul {
 
 form {
   display: grid;
-  grid-template-columns: 1fr;
   row-gap: 10px;
   max-width: 360px;
   margin: 0 auto;
+}
+@media screen and (min-width: 641px) {
+  form {
+    grid-template-columns: 80px auto;
+  }
 }
 
 #portrait {
@@ -469,10 +473,22 @@ h2 {
     width: initial;
   }
 }
+@media screen and (min-width: 1008px) {
+  #about {
+    max-width: 1008px;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  #contact {
+    max-width: 1008px;
+    margin: 0 auto;
+  }
+}
 
 #submit {
   width: 100px;
-  margin: 0 0 auto 0;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 641px) {
