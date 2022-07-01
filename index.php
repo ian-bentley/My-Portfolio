@@ -1,3 +1,5 @@
+<?php include 'emailme.php';?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -8,7 +10,7 @@
         <meta name="description" content="My portfolio">
 
         <link rel="stylesheet" href="css/styles.css">
-
+        
     </head>
     <body>
         <header>
@@ -115,8 +117,8 @@
                         <li>Email: ibentley981203@gmail.com</li>
                         <li>Phone: +1 (619) 850-4688</li>
                     </ul>
-                    <p>Alternatively, you can contact me via email using the form below:</p>
-                    <form method="post" action="emailme.php">
+                    <!-- <p>Alternatively, you can contact me via email using the form below:</p>
+                    <form method="post">
                         <label for="first-name">First Name</label>
                         <input type="text" id="first-name" name="firstName">
                         <label for="last-name">Last Name</label>
@@ -124,9 +126,9 @@
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email">
                         <label for="message">Message</label>
-                        <textarea id="message"></textarea>
+                        <textarea id="message" name="message"></textarea>
                         <input type="submit" id="submit" value="Email Me">
-                    </form>
+                    </form> -->
                 </section>
             </div>
         </main>
