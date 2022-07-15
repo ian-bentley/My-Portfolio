@@ -14,5 +14,5 @@ xmlhttp.onload = function() {
         catalogGrid.appendChild(catalogItem);
     }
 }
-xmlhttp.open("GET", "search.php?query=SELECT * FROM Books");
+xmlhttp.open("GET", "../search.php?query=SELECT * FROM Books");
 xmlhttp.send();

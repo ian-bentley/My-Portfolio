@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Crescent Moon Library</title>
+
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="../home/">Home</a>
+        </header>
+        <main>
+            <form action="" id="check-in-and-out">
+                <label for="book-id">Enter book ID</label>
+                <input type="text" id="book-id" name="bookId">
+                <label for="account-id">Enter account ID</label>
+                <input type="text" id="account-id" name="accountId">
+                <input type="button" id="check-out-book-btn" value="Check Out">
+                <input type="button" id="check-in-book-btn" value="Check In">
+            </form>
+            <div id="checking-error">
+
+            </div>
+        </main>
+        <script src="../js/checking.js"></script>
+    </body>
+</html>
