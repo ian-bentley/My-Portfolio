@@ -21,17 +21,26 @@ checkOutBtn.onclick = () => {
     const dateDue = new Date(dateDueInMilliseconds);
     const dateDueISO = dateDue.toISOString().substring(0, 10);
 
-    // set query to database to insert this transaction
+    if (IsAccountIDValid() && IsBookIDValid())
+    {
+        // insert this transaction into database
+        let query = `INSERT INTO Transactions (account_id, book_id, date_checked_out, date_due) VALUES (${accountId}, ${bookId}, "${dateTodayISO}", "${dateDueISO}");`;
 
-    let query = `INSERT INTO Transactions (account_id, book_id, date_checked_out, date_due) VALUES (${accountId}, ${bookId}, "${dateTodayISO}", "${dateDueISO}");`;
+        // Send request to database
+        // const xmlhttp = new XMLHttpRequest();
+        // xmlhttp.onload = function() {
 
-    console.log(query);
+        // }
+        // xmlhttp.open("GET", "../search.php?query=" + query);
+        // xmlhttp.send();
+        let url = "../search.php?query=" + query;
 
-    // Send request to database
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = function() {
-
+        const xmlhttp = SendXMLHttpRequest(() => {
+            // Display the transaction receipt to confirm that it was added.
+        }, url);
     }
-    xmlhttp.open("GET", "../search.php?query=" + query);
-    xmlhttp.send();
+    else
+    {
+        //place error invalid IDs text below checking form
+    }
 }

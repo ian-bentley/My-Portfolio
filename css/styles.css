@@ -337,6 +337,20 @@ template {
   display: none;
 }
 
+.bubble-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bubble-list li {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid #222222;
+  border-radius: 5px;
+  background-color: #222222;
+  padding: 5px;
+}
+
 * {
   box-sizing: border-box;
 }

@@ -1,0 +1,13 @@
+.bubble-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bubble-list li {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid $secondary-page-color;
+    border-radius: 5px;
+    background-color: $secondary-page-color;
+    padding: 5px;
+}
